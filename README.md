@@ -127,4 +127,4 @@ CoT training accelerates convergence and enhances generalization from ID to both
 
 <img src="Pictures\noise_only_t.jpg" alt="noise_only_t" style="zoom:50%;" />
 
-![real1](Pictures\real1.jpg)
+<img src="Pictures\real1.jpg" alt="real1" style="zoom:60%;" />
