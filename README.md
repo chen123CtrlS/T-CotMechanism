@@ -26,9 +26,10 @@ CoT training internalizes reasoning into a two-stage generalizing circuit, where
 
 the information-theoretic generalization bounds via distributional divergence can be decomposed into ID and OOD components. While ID error diminishes with sufficient training regardless of CoT, OOD error critically depends on CoT: Non-CoT training fails to generalize to OOD samples due to unseen reasoning patterns, whereas CoT training achieves near-perfect OOD generalization by mastering subtasks and reasoning compositions during training.
 
-![theorem1](Pictures\theorem1.jpg)
+<img src="Pictures\theorem1.jpg" alt="theorem1" style="zoom:80%;" />
 
-![theorem2](Pictures\theorem2.jpg)
+<img src="Pictures\theorem2.jpg" alt="theorem2" style="zoom:80%;" />
+
 
 ## ⚙️ Controlled Experiments
 
