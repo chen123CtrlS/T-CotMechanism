@@ -1,4 +1,4 @@
-# TCotMechanism
+# T-CotMechanism
 
 This repository contains code for the paper： 
 
