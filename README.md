@@ -62,7 +62,7 @@ TCotMechanism/ControlledExperiments/composition.ipynb
 >
 >lambda_noise = 0.4 $ noise ratio
 >
->phi=7.2  # $|S_{\text{ID}_{train}}^{(2)}|/|S_{\text{ID}}|$
+>phi=7.2  # $|S_{\text{ID}}^{(2)}|/|S_{\text{ID}}|$
 
 3. Training.
 
