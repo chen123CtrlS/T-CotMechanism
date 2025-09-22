@@ -1,34 +1,33 @@
 # T-CotMechanism
 
-This repository contains code for the paper： 
-
-Unveiling the Mechanisms of Explicit CoT Training: How CoT Enhances Reasoning Generalization
+This repository contains code for our paper.
 
 ## 🎯 Introduction
 
 The integration of explicit Chain-of-Thought (CoT) reasoning into training large language models (LLMs) has advanced their reasoning capabilities, yet the mechanisms by which CoT enhances generalization remain poorly understood:
 
-- **(Q1)** how the integration of step-by-step rationales during explicit CoT training reshapes internal model representations?
+- **(Q1)** Does CoT training improve reasoning generalization across both in-distribution (ID) and out-of-distribution (OOD) scenarios—and if so, what theoretical principles govern this ability?
 
-- **(Q2)** how these structural changes contribute to improved reasoning generalization across both in-distribution (ID) and out-of-distribution (OOD) scenarios?
+- **(Q2)** How is this generalization capability realized within the model's internal representations?
 
 ## 🎉key Insights
+In this paper, we propose that **compositional generalization is fundamental**: models systematically combine simpler learned skills during CoT training to address novel and more complex problems. We formalize this process through a unified theoretical framework and validate it via a detailed structural analysis of the model's internal computational circuits. (See main text for more details!)
 
-In this paper, we investigate zero-shot CoT data directly and formalize how step-wise reasoning emerges to support both ID and OOD generalization in transformer-based CoT optimization. The analysis is carried out through a **comparison study** of training paradigms with and without CoT. (See main text for more details!)
+Main contributions: We establish a theoretical and structural framework for understanding the generalization of CoT training. A key point is that CoT training helps models learn how to think—by enabling compositional reasoning—not just what to think, by simply providing correct answers. These findings offer insights into CoT strategies for LLMs to achieve robust generalization.
 
-- **Structural Advantage** (for Q1):
-
-CoT training internalizes reasoning into a two-stage generalizing circuit, where the number of stages corresponds to the explicit reasoning steps during training. *Notably, CoT-trained models resolve intermediate results at shallower layers compared to non-CoT counterparts, freeing up deeper layers to specialize in subsequent reasoning steps.*
-
-<img src="Pictures\circuit_change.jpg" alt="circuit_change" style="zoom:87%;" />
-
-- **Theoretical Analysis** (for Q2):
+- **Theoretical Analysis** (for Q1):
 
 the information-theoretic generalization bounds via distributional divergence can be decomposed into ID and OOD components. While ID error diminishes with sufficient training regardless of CoT, OOD error critically depends on CoT: Non-CoT training fails to generalize to OOD samples due to unseen reasoning patterns, whereas CoT training achieves near-perfect OOD generalization by mastering subtasks and reasoning compositions during training.
 
 <img src="Pictures\theorem1.jpg" alt="theorem1" style="zoom:80%;" />
 
 <img src="Pictures\theorem2.jpg" alt="theorem2" style="zoom:80%;" />
+
+- **Structural Advantage** (for Q2):
+
+CoT training internalizes reasoning into a two-stage generalizing circuit, where the number of stages corresponds to the explicit reasoning steps during training. *Notably, CoT-trained models resolve intermediate results at shallower layers compared to non-CoT counterparts, freeing up deeper layers to specialize in subsequent reasoning steps.*
+
+<img src="Pictures\circuit_change.jpg" alt="circuit_change" style="zoom:87%;" />
 
 
 ## ⚙️ Controlled Experiments
